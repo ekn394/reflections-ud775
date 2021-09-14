@@ -1,29 +1,54 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+    You use remotes to clone a copy of an online repo. 
+    And to send your local repo back up to GitHub for cloud storage.
+
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    Maybe you are re-writing a feature, and don't want to pull down the 
+    the working master copy.  
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    Branches are different paths within a repo. 
+    Clones allow you to make a new local copy of an entire repo. 
+    Forks allow you to modify another repo with your own changes, without 
+    making any changes to the original (which you may not have access to).  
+    GitHub does display the forks of a given repo, not the number of times it was cloned. 
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    Having the most up to date version of the remote master, means that you can compare
+    your changes to the working copy to make sure it is compatible (not just compatible with 
+    an outdated version you may have locally.)
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Without Git or GitHub, you would have to manually add suggestions from collaborators
+    onto some 'master' copy of your software.  Seems more fragile, and error prone.  You would have to 
+    maintain backups in case the 'real' copy gets corrupted, and you would have to 
+    manually make those backups after each 'commit'.  If you wanted to go back to a previous version, 
+    you would have to hope you still have physical access to that old version.  This means you have to store
+    multiple copies of (all of your ) files.  Using something like Google Docs to collaborate on a shared document
+    would alleviate SOME of those issues, but it isn't plain text by default, and it autosaves at points where you may not want it to.
+    Google docs also saves the state of the files individually not all the connected files as a unit the way Git takes a 
+    snapshot of all the (desired) files at once. This represents the working copy at that point in time that you can 
+    easily go back and reference, or branch off from. 
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    Straight out of concept # 31. 
+
+    A common workflow is to make changes (like a new feature) in a separate branch that you can later request be pulled into the 
+    main master by making a pull request.  In order to avoid merge conflicts, you will need to first merge your changes
+    with the most up to date (remote) master branch.  After merge the most to date master branch into your 
+    new branch, then you can merge your new branch with the master on GitHub via a pull request, or locally via git merge. 
+    
+         

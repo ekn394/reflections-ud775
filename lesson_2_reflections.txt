@@ -1,21 +1,45 @@
-Q: What happens when you initialize a repository? Why do you need to do it?
+---Q: What happens when you initialize a repository? Why do you need to do it?
 
 A: Initializing a repository creates the necessary files and folders (in a hidden directory .git) used to track changes to the folder's contents over time. 
     It is a necessary step for turning a regular folder into a git repository.  Now the folder has trackable version control. 
 
 Q: How is the staging area different from the working directory and the repository?
     What value do you think it offers?
+A:    The working directory contains ALL of the files that make up the software. 
+    The staging area is a place that you can put the updated parts of the code that make sense for a logical commit. 
+
 
 Q: How can you use the staging area to make sure you have one commit per logical
 change?
+A: Same as above.  The staging area allows the commit to be focused on a single file (or small group of files)
+that results in one logical change.  You don't have to commit changes to files that you didn't modify.  It is better that they are 
+set to have last changed, the last time the actually changed.  That way it is easy to see when bugs are introduced and where.  
+ 
+
 
 Q: What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+If you wanted to try to make a new feature or mode, but don't want to affect
+the main branch until your are completely finished. 
+Making an Easy Mode for example shouldn't change your regular mode.  
+New feature branch, experimental branch,   
 
 Q: How do the diagrams help you visualize the branch structure?
+It helps to show which commits are visible from the branch that you are on. 
+Illustrates that the bullet bug fix is not present in the coins branch.
+Since the coins branch split off before that. It also split off the master branch
+before colour was added to the game.  These seem like good candiates for things
+that need to be merged in the future.  To bring the code to add color to the coins branch, or 
+the coins feature to the master branch.  
 
 Q: What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+the diagram the way we do? 
+Merging two branches creates a new node, that has both parent branches. 
+From this new node, you can use git log to see the history of both merged branches. 
+Warning: The git log may now look out of order as the commits on both branches will be 
+listed by their commit date, so commits from both branches may be interleaved.  
 
 Q: What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+If the merges are straightforward, then it will automatically merge them.  Otherwise 
+it asks for clarification. 
